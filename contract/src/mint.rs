@@ -33,8 +33,8 @@ impl Contract {
             let mut title = "".to_string();
             let mut description = "".to_string();
 
-            title = $role + "#".to_owned() + &token_id;
-            description = $role + "NFTs minted by instructor and send to students who passed the" + $role + "study course.".to_owned();
+            title = role.clone() + &"#".to_owned() + &token_id;
+            description = role.clone() + &"NFTs minted by instructor and send to students who passed the study course.".to_owned();
             
             
             self.token_metadata_by_id.insert(&token_id, &TokenMetadata{
